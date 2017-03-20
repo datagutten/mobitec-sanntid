@@ -20,7 +20,7 @@ if($serial->deviceSet($config['serial_port']))
 
 	// Then we need to open it
 	$serial->deviceOpen();
-
+	echo "Successfully opened {$config['serial_port']}\n";
 	$data='';
 	while($data!==false)
 	{
@@ -30,6 +30,6 @@ if($serial->deviceSet($config['serial_port']))
 			$data=shell_exec('php mobitec-sanntid.php');
 		//file_put_contents('sanntid.debug.mobitec',$data);
 		$serial->sendMessage($data);
-		sleep(30);
+		sleep($config['refresh_time']);
 	}
 }
