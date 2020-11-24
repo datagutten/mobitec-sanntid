@@ -1,9 +1,0 @@
-[submodule "PHP-Serial"]
-	path = PHP-Serial
-	url = https://github.com/Xowap/PHP-Serial.git
-[submodule "mobitec-php"]
-	path = mobitec-php
-	url = https://github.com/datagutten/mobitec-php.git
-[submodule "sanntidpluss"]
-	path = sanntidpluss
-	url = https://github.com/datagutten/sanntidpluss.git

@@ -1,0 +1,89 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b85e5b7152ee0e0cc91bd9940c4046df",
+    "packages": [
+        {
+            "name": "datagutten/mobitec",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/datagutten/mobitec-php.git",
+                "reference": "d9c8bcbff8ab345dbaf5513f48ee31bff0098791"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/datagutten/mobitec-php/zipball/d9c8bcbff8ab345dbaf5513f48ee31bff0098791",
+                "reference": "d9c8bcbff8ab345dbaf5513f48ee31bff0098791",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-mbstring": "*"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "datagutten",
+                    "email": "datagutten@datagutten.net"
+                }
+            ],
+            "description": "Tools to parse and output data for Mobitec signs",
+            "time": "2019-08-18T07:27:06+00:00"
+        },
+        {
+            "name": "hyperthese/php-serial",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Xowap/PHP-Serial.git",
+                "reference": "69f31b281654f845134c9424d5656af28170d2e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Xowap/PHP-Serial/zipball/69f31b281654f845134c9424d5656af28170d2e6",
+                "reference": "69f31b281654f845134c9424d5656af28170d2e6",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Rémy Sanchez",
+                    "email": "remy.sanchez@hyperthese.net"
+                }
+            ],
+            "description": "Multi-platform serial port access convenience class",
+            "time": "2014-02-21T00:24:39+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}

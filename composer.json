@@ -1,0 +1,16 @@
+{
+    "name": "datagutten/mobitec-sanntid",
+    "description": "A tool to display real time information from ruter on a mobitec flip-dot sign",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "datagutten",
+            "email": "datagutten@datagutten.net"
+        }
+    ],
+    "require": {
+        "datagutten/mobitec": "^1.0",
+        "hyperthese/php-serial": "^1.0"
+    }
+}

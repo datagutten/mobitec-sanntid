@@ -1,9 +1,9 @@
 #! /usr/bin/php
 <?Php
-require 'config.php';
+$config = require 'config.php';
 
 //https://github.com/Xowap/PHP-Serial
-require 'PHP-Serial/src/PhpSerial.php';
+require 'vendor/autoload.php';
 // Let's start the class
 $serial = new PhpSerial;
 
