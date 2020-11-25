@@ -10,7 +10,14 @@
         }
     ],
     "require": {
-        "datagutten/mobitec": "^1.0",
-        "hyperthese/php-serial": "^1.0"
+        "datagutten/mobitec": "dev-master",
+        "datagutten/php-serial": "^1.1",
+        "ext-xml": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "datagutten\\mobitec_sis\\": "src"
+        }
     }
 }

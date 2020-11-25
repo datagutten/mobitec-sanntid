@@ -4,27 +4,37 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b85e5b7152ee0e0cc91bd9940c4046df",
+    "content-hash": "29d8e2574ff84ad9df31badf14eac53a",
     "packages": [
         {
             "name": "datagutten/mobitec",
-            "version": "v1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/datagutten/mobitec-php.git",
-                "reference": "d9c8bcbff8ab345dbaf5513f48ee31bff0098791"
+                "reference": "64f90fdbf007b95940fb4feaa348e0f71977f7b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/datagutten/mobitec-php/zipball/d9c8bcbff8ab345dbaf5513f48ee31bff0098791",
-                "reference": "d9c8bcbff8ab345dbaf5513f48ee31bff0098791",
+                "url": "https://api.github.com/repos/datagutten/mobitec-php/zipball/64f90fdbf007b95940fb4feaa348e0f71977f7b2",
+                "reference": "64f90fdbf007b95940fb4feaa348e0f71977f7b2",
                 "shasum": ""
             },
             "require": {
                 "ext-ctype": "*",
-                "ext-mbstring": "*"
+                "ext-mbstring": "*",
+                "php": ">=7.1"
             },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5|^8.4|^9"
+            },
+            "default-branch": true,
             "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "datagutten\\mobitec\\": "src"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-or-later"
@@ -36,54 +46,65 @@
                 }
             ],
             "description": "Tools to parse and output data for Mobitec signs",
-            "time": "2019-08-18T07:27:06+00:00"
+            "support": {
+                "issues": "https://github.com/datagutten/mobitec-php/issues",
+                "source": "https://github.com/datagutten/mobitec-php/tree/master"
+            },
+            "time": "2020-11-25T18:34:05+00:00"
         },
         {
-            "name": "hyperthese/php-serial",
-            "version": "1.0.1",
+            "name": "datagutten/php-serial",
+            "version": "v1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Xowap/PHP-Serial.git",
-                "reference": "69f31b281654f845134c9424d5656af28170d2e6"
+                "url": "https://github.com/datagutten/PHP-Serial.git",
+                "reference": "494ce9fa226010feeb2cd0bd563baf109a33574c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Xowap/PHP-Serial/zipball/69f31b281654f845134c9424d5656af28170d2e6",
-                "reference": "69f31b281654f845134c9424d5656af28170d2e6",
+                "url": "https://api.github.com/repos/datagutten/PHP-Serial/zipball/494ce9fa226010feeb2cd0bd563baf109a33574c",
+                "reference": "494ce9fa226010feeb2cd0bd563baf109a33574c",
                 "shasum": ""
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop": "1.0.x-dev"
-                }
-            },
             "autoload": {
-                "classmap": [
-                    "src/"
-                ]
+                "psr-4": {
+                    "datagutten\\phpSerial\\": "src"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GNU GPLv2"
+                "GPL-2.0-only"
             ],
             "authors": [
                 {
-                    "name": "Rémy Sanchez",
-                    "email": "remy.sanchez@hyperthese.net"
+                    "name": "Bram Ceulemans",
+                    "email": "bramceulemans@me.com"
+                },
+                {
+                    "name": "datagutten",
+                    "email": "datagutten@datagutten.net"
                 }
             ],
             "description": "Multi-platform serial port access convenience class",
-            "time": "2014-02-21T00:24:39+00:00"
+            "support": {
+                "source": "https://github.com/datagutten/PHP-Serial/tree/v1.1"
+            },
+            "time": "2020-11-25T18:59:19+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "datagutten/mobitec": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-xml": "*",
+        "ext-json": "*"
+    },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
