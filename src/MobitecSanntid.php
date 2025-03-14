@@ -15,18 +15,21 @@ class MobitecSanntid
     private $mobitec;
     private $config;
     private static $debug=true;
+    public static $backend_url;
 
     public function __construct($config)
     {
         $this->mobitec = new MobitecSerial($config['serial_port']);
         $this->config = $config;
+        self::$backend_url = $config['backend_url'];
     }
-    public static function find_departure($stop, $destination)
+
+    public static function find_departure($quay, $line, $destination)
     {
-        $departures = file_get_contents(sprintf('https://www.sanntidpluss.no/departures/stop/%s.json', $stop));
+        $departures = file_get_contents(sprintf('%s/departures?quay=%s&line=%s', self::$backend_url, $quay, $line));
         $departures = json_decode($departures, true);
 
-        foreach($departures['data']['stopPlace']['estimatedCalls'] as $departure)
+        foreach($departures['data']['quay']['estimatedCalls'] as $departure)
         {
             if($departure['destinationDisplay']['frontText']!=$destination)
                 continue;
@@ -47,9 +50,9 @@ class MobitecSanntid
             return self::write_time($departure_time->format('H:i'));
     }
 
-    public function departure_output($stop, $destination)
+    public function departure_output($quay, $line, $destination)
     {
-        $departure = self::find_departure($stop, $destination);
+        $departure = self::find_departure($quay, $line, $destination);
         $output = self::write_line_number($departure['serviceJourney']['journeyPattern']['line']['publicCode']);
         $output .= self::departure_time($departure);
         $this->mobitec->serial_output($output, 11,28,16);

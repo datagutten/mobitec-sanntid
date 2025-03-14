@@ -9,6 +9,6 @@ $config = require 'config.php';
 $sanntid = new MobitecSanntid($config);
 while (true)
 {
-    $sanntid->departure_output($config['stop_id'], $config['destination']);
+    $sanntid->departure_output($config['quay'], $config['line'], $config['destination']);
     sleep($config['refresh_time']);
 }
